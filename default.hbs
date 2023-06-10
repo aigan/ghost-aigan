@@ -77,6 +77,9 @@
         {{!-- Header With Drop Down --}}
         {{#match @custom.header "Drop Down Menu"}}{{> "layout/header" hasDropDown=true}}{{/match}}
 
+        {{!-- Subscribe and tag -> this will be below the header --}}
+        {{#is "index, home, tag"}}{{> "widget/secondary-menu"}}{{/is}}
+
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         <main class="simply-main relative min-h-lg">{{{body}}}</main>
 

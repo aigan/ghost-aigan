@@ -1,0 +1,21 @@
+
+{{!-- secondary Navigation or category --}}
+<div class="secondaryMenu u-paddingTop20 u-paddingBottom20">
+    <nav class="container">
+    {{#if @site.secondary_navigation}}
+        {{navigation type="secondary"}}
+    {{else}}
+        {{!-- Tags Cloud Menu or category --}}
+        {{#get "tags" limit="6" include="count.posts" order="count.posts desc" as |category_nav|}}
+        {{#if category_nav}}
+            <ul class="nav">
+                <li>{{#link href="/" activeClass="nav-current"}}{{t "All"}}{{/link}}</li>
+                {{#foreach category_nav}}
+                <li>{{#link href=(url) activeClass="nav-current"}}{{name}}{{/link}}</li>
+                {{/foreach}}
+            </ul>
+        {{/if}}
+        {{/get}}
+    {{/if}}
+    </nav>
+</div>

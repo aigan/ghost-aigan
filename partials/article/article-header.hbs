@@ -1,8 +1,10 @@
-{{#if primary_tag}}
+{{!-- if primary_tag --}}
+{{#if false }}
 <div class="mb-3 text-gray-500 tracking-wider text-sm font-medium">
     {{#primary_tag}}<a class="uppercase hover:underline" href="{{url}}">{{name}}</a>{{/primary_tag}}
 </div>
 {{/if}}
+
 
 <h1 class="post-title text-32 md:text-4xl lg:text-44 text-title leading-tight">{{title}}</h1>
 {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-22 text-gray-500">{{custom_excerpt}}</p>{{/if}}

@@ -1,0 +1,34 @@
+
+.secondaryMenu .nav {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-wrap: wrap
+}
+
+.secondaryMenu .nav li {
+  margin: 5px 10px 5px 0
+}
+
+.secondaryMenu .nav li a {
+  color: #6c757d;
+  display: inline-block;
+  font-size: .875rem;
+  padding: 6px 10px;
+  text-transform: uppercase
+}
+
+.secondaryMenu .nav li a.nav-current,.secondaryMenu .nav li a:hover {
+  color: #2ecc71;
+}
+
+.secondaryMenu .nav li a.nav-current {
+  font-weight: 500
+}
+
+@media only screen and (max-width: 766px) {
+	.secondaryMenu ul li a {
+    border: 1px solid #e2e2e2;
+	}
+}

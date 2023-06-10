@@ -10,11 +10,13 @@
     <div class="mx-auto px-4 max-w-5xl text-center">
         <h1 class="capitalize text-4xl text-title lg:text-5xl">{{name}}</h1>
 
+				{{#if false}}
         <div class="text-center font-medium mt-8">
             <a class="hover:text-primary" href="{{@site.url}}">{{t "Home"}}</a>
             <svg class="icon h-3 w-3"><use xlink:href="#icon-arrow-forward"></use></svg>
             <span class="text-gray-500">{{t "Posts Tagged"}} "{{name}}"</span>
         </div>
+				{{/if}}
 
         {{#if description}}<p class="text-xl mt-5 font-serif max-w-xl mx-auto">{{description}}</p>{{/if}}
     </div>
