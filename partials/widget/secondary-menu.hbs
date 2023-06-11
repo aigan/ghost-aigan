@@ -6,7 +6,7 @@
         {{navigation type="secondary"}}
     {{else}}
         {{!-- Tags Cloud Menu or category --}}
-        {{#get "tags" limit="8" include="count.posts" order="count.posts desc" as |category_nav|}}
+        {{#get "tags" limit="6" include="count.posts" order="count.posts desc" as |category_nav|}}
         {{#if category_nav}}
             <ul class="nav">
                 <li>{{#link href="/" activeClass="nav-current"}}{{t "All"}}{{/link}}</li>
