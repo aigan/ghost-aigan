@@ -12,6 +12,8 @@ body {
 
   color: var(--text-base);
   background-color: var(--bg-base) ;
+  transition: background-color 0.5s ease;
+	
   letter-spacing: 0;
   margin: 0 auto;
   overflow-x: hidden;

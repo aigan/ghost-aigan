@@ -61,7 +61,6 @@
 
     {{!-- Styles --}}
     <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>
-    {{!-- <style>{{> "main-styles"}}</style> --}}
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
@@ -85,6 +84,9 @@
 
         {{!-- Footer Default ./partials/layout/footer.hbs --}}
         {{#match @custom.footer "Default"}}{{>"layout/footer"}}{{/match}}
+
+        {{!-- Footer Aigan ./partials/layout/footer-aigan.hbs --}}
+        {{#match @custom.footer "Aigan"}}{{>"layout/footer-aigan"}}{{/match}}
 
         {{!-- Footer - Dark ./partials/layout/footer-dark.hbs --}}
         {{#match @custom.footer "Dark"}}{{>"layout/footer-dark"}}{{/match}}

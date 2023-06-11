@@ -20,6 +20,11 @@
 /* Story grid card
 /* ---------------------------------------------------------- */
 
+article.story{
+	display: flex;
+	justify-content: flex-start;
+}
+
 .ss1 {
   .story-title {
     @apply lg:text-4xl;
@@ -41,3 +46,12 @@
   }
 }
 
+.ss3 {
+}
+
+@media only screen and (min-width: 1000px) {
+	article.story.ss1 {
+    display: grid;
+		gap: 1.5rem;
+	}
+}

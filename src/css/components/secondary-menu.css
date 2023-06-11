@@ -20,7 +20,7 @@
 }
 
 .secondaryMenu .nav li a.nav-current,.secondaryMenu .nav li a:hover {
-  color: #2ecc71;
+  color: var(--ghost-accent-color);
 }
 
 .secondaryMenu .nav li a.nav-current {

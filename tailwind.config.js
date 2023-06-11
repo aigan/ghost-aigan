@@ -19,6 +19,7 @@ module.exports = {
       orange: '#f42',
       white: '#fff',
       'dark-blue-500': '#102b7b',
+			'green-700': '#047857',
 
       // Logo & Header
       logo: 'var(--header-text-link)',
