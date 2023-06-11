@@ -82,17 +82,9 @@
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         <main class="simply-main relative min-h-lg">{{{body}}}</main>
 
-        {{!-- Footer Default ./partials/layout/footer.hbs --}}
-        {{#match @custom.footer "Default"}}{{>"layout/footer"}}{{/match}}
-
         {{!-- Footer Aigan ./partials/layout/footer-aigan.hbs --}}
-        {{#match @custom.footer "Aigan"}}{{>"layout/footer-aigan"}}{{/match}}
+        {{>"layout/footer-aigan"}}
 
-        {{!-- Footer - Dark ./partials/layout/footer-dark.hbs --}}
-        {{#match @custom.footer "Dark"}}{{>"layout/footer-dark"}}{{/match}}
-
-        {{!-- Footer Not Menu ./partials/layout/footer-not-menu.hbs --}}
-        {{#match @custom.footer "No Secondary Navigation"}}{{>"layout/footer-not-menu"}}{{/match}}
     </div>
 
     {{!-- Loandig Bar --}}

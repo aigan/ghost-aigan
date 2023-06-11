@@ -61,25 +61,11 @@
       ]
     },
     "custom": {
-			"social_github" : {
-				"type": "text",
-				"default": ""
-			},
       "header": {
         "type": "select",
         "options": [
           "Default",
           "Drop Down Menu"
-        ],
-        "default": "Default"
-      },
-      "footer": {
-        "type": "select",
-        "options": [
-          "Default",
-					"Aigan",
-          "Dark",
-          "No Secondary Navigation"
         ],
         "default": "Default"
       },

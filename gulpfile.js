@@ -54,7 +54,8 @@ const clean = () => {
   return del([
     'assets',
     'partials/styles',
-    'dis'
+    'dis',
+		'partials/icons/icons-symbol-defs.hbs'
   ], { force: true })
 }
 
@@ -142,6 +143,15 @@ function images (done) {
   pump([
     src('src/img/**/*.*'),
     dest('assets/images'),
+    livereload()
+  ], handleError(done))
+}
+
+function svgs (done) {
+  pump([
+    src('src/svg-icons/symbol-defs.svg'),
+		rename('icons-symbol-defs.hbs'),
+    dest('partials/icons'),
     livereload()
   ], handleError(done))
 }
@@ -237,7 +247,7 @@ const imgWatcher = () => watch('src/img/**', images)
 // const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs)
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], styles)
 
-const compile = parallel(styles, scripts, images)
+const compile = parallel(styles, scripts, images, svgs)
 const watcher = parallel(cssWatcher, jsWatcher, imgWatcher, hbsWatcher)
 
 const build = series(clean, compile)

@@ -1,46 +1,75 @@
 <div class="js-social-media social-media{{#if class}} {{class}}{{/if}}">
-	{{#if @custom.social_github}}
-		<a class="godo-tracking p-2 inline-block hover:opacity-70"
-			data-event-category="Header"
-			data-event-action="Social"
-			data-event-label="Github"
-			data-event-non-interaction="true"
-			title="Github {{@custom.social_github}}"
-			aria-label="Github {{@custom.social_github}}"
-			href="https://github.com/{{@custom.social_github}}"
-			target="_blank"
-			rel="noopener noreferrer">
-			<svg class="icon icon--github"><use xlink:href="#icon-github"></use></svg>
-		</a>
-	{{/if}}
 
-	{{#if @site.facebook}}
-		<a class="godo-tracking p-2 inline-block hover:opacity-70"
-			data-event-category="Header"
-			data-event-action="Social"
-			data-event-label="Facebook"
-			data-event-non-interaction="true"
-			title="Facebook {{@site.facebook}}"
-			aria-label="Facebook {{@site.facebook}}"
-			href="{{facebook_url}}"
-			target="_blank"
-			rel="noopener noreferrer">
-			<svg class="icon icon--facebook"><use xlink:href="#icon-facebook"></use></svg>
-		</a>
-	{{/if}}
+	{{> "widget/social-item"
+		social="Github"
+		user="aigan"
+		social_url="https://github.com/aigan"
+		icon="github"
+	}}
 
-	{{#if @site.twitter}}
-		<a class="godo-tracking p-2 inline-block hover:opacity-70"
-			data-event-category="Header"
-			data-event-action="Social"
-			data-event-label="Twitter"
-			data-event-non-interaction="true"
-			title="Twitter {{@site.twitter}}"
-			aria-label="Twitter {{@site.twitter}}"
-			href="{{twitter_url}}"
-			target="_blank"
-			rel="noopener noreferrer">
-			<svg class="icon icon--twitter"><use xlink:href="#icon-twitter"></use></svg>
-		</a>
-	{{/if}}
+	{{> "widget/social-item"
+		social="Facebook"
+		user="aigan"
+		social_url="https://www.facebook.com/aigan"
+		icon="facebook"
+	}}
+
+	{{> "widget/social-item"
+		social="Discord"
+		user="aigan1"
+		social_url="https://discordapp.com/users/272706759435747328"
+		icon="discord"
+	}}
+	
+	{{> "widget/social-item"
+		social="YouTube"
+		user="JonasLiljegren"
+		social_url="https://www.youtube.com/@JonasLiljegren"
+		icon="youtube"
+	}}
+	
+	{{> "widget/social-item"
+		social="Twitter"
+		user="aigan"
+		social_url="https://twitter.com/aigan"
+		icon="twitter"
+	}}
+	
+	{{> "widget/social-item"
+		social="LinkedIn"
+		user="Jonas Liljegren"
+		social_url="https://www.linkedin.com/in/jonas-liljegren-862a6127/"
+		icon="linkedin"
+	}}
+
+	{{> "widget/social-item"
+		social="Reddit"
+		user="aigan2"
+		social_url="https://www.reddit.com/user/aigan2/"
+		icon="reddit"
+	}}
+
+	{{> "widget/social-item"
+		social="PlayStation"
+		user="aigan1"
+		social_url="https://psnprofiles.com/aigan1?order=percent"
+		icon="playstation"
+	}}
+
+	{{> "widget/social-item"
+		social="Steam"
+		user="aigan"
+		social_url="https://steamcommunity.com/id/aigan/"
+		icon="steam"
+	}}
+
+	
+	{{> "widget/social-item"
+		social="Twitch"
+		user="aigan1"
+		social_url="https://www.twitch.tv/aigan1"
+		icon="twitch"
+	}}
+
 </div>
+
