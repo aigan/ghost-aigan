@@ -1,0 +1,37 @@
+/*
+ Would have liked to use hsl(from var(--ghost-accent-color) h s l / 0.7);
+*/
+:root {
+	--icon-pulse-color: 4 120 87;
+}
+
+@keyframes icon-pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgb( var(--icon-pulse-color) / 1);
+		background: rgb( var(--icon-pulse-color) );
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgb( var(--icon-pulse-color) / 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgb( var(--icon-pulse-color) / 0);
+	}
+}
+
+.icon-pulse:hover {
+	border-radius: 50%;
+	/*
+	height: 1.5rem;
+	width: 1.5rem;
+
+	box-shadow: 0 0 0 0 rgb( var(--color-pulse) / 0);
+	transform: scale(1);
+ */
+	color: var(--ghost-accent-color);
+	animation: icon-pulse 2s 1;
+}
