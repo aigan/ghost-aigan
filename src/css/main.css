@@ -36,6 +36,7 @@
 @import "./components/code.css";
 /* @import "./components/modal.css"; */
 @import "./components/secondary-menu.css";
+@import "./components/tags.css";
 
 /* Pages
 /* ---------------------------------------------------------- */
@@ -56,6 +57,7 @@
 /* ---------------------------------------------------------- */
 
 @import "tailwindcss/utilities";
+@import "./utils/pulse.css";
 
 /* Layout
 /* ---------------------------------------------------------- */

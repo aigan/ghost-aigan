@@ -1,5 +1,5 @@
 .header {
-  transition: transform .3s;
+  transition: transform .3s background-color 1.0s ease;
 }
 
 .header-bg {
