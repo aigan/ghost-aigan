@@ -94,6 +94,7 @@
   width: 1.5rem;
   height: 1.5rem;
   position: relative;
+  color: var(--header-text-link);
 }
 
 .lightswitch > .icon {
