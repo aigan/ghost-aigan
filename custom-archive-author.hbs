@@ -36,11 +36,7 @@
             <h2 class="author-card-name text-title capitalize text-2xl mt-5 hover:text-primary"><a href="{{url}}">{{name}}</a></h2>
             {{#if bio}}<p class="author-card-bio text-gray-500 line-clamp-3 mt-3 leading-relaxed">{{bio}}</p>{{/if}}
 
-            <div class="pt-5 space-x-2">
-                {{#if facebook}}<a href="{{facebook_url}}" class="button is-white" title="Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>{{/if}}
-                {{#if twitter}}<a href="{{twitter_url}}" class="button is-white" title="{{twitter}}" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>{{/if}}
-                {{#if website}}<a href="{{website}}" class="button is-white" title="{{website}}" target="_blank" rel="noopener noreferrer"><svg class="icon is-stroke"><use xlink:href="#icon-link"></use></svg></a>{{/if}}
-            </div>
+			{{> "widget/social-media" class="footer-social-media mt-8 flex-none lg:mt-0 is-inline"}}
         </article>
     {{/foreach}}
 </div>
