@@ -90,6 +90,16 @@
 /* Dark Mode
 /* ---------------------------------------------------------- */
 
+.lightswitch {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+}
+
+.lightswitch > .icon {
+  position: absolute;
+}
+
 .dark {
   .icon--sunny {
     display: block !important;
