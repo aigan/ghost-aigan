@@ -1,0 +1,41 @@
+#pi-pos{
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+}
+
+#pi-pos a {
+	position: absolute;
+	bottom: -1.6px;
+	right: 3.2px;
+	text-decoration: none;
+	color: black;
+	opacity: .2;
+}
+
+
+.flame {
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(-45deg, orange, yellow);
+  border-radius: 15px 15px 0px 15px;
+  transform: rotate(-135deg);
+  filter: blur(1px);
+  position: relative;
+  box-shadow: 1.7px 2px 9px #700;
+  border: 4.5px solid #F75;
+  border-left-width: 2.5px;
+  border-top-width: 2.5px;
+}
+
+#pi-pos:hover .flame {
+	opacity: .8;
+	transition: opacity .5s;
+}
+
+#pi-pos a:hover, #pi-pos:hover a{
+	color: red;
+	transition: color 2s, opacity 1s;
+	opacity: 1;
+}
