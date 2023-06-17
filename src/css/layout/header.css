@@ -3,6 +3,10 @@
 	backdrop-filter: blur(10px);
 }
 
+body.is-head-transparent .header {
+	backdrop-filter: none;
+}
+
 .header-bg {
   background-color: var(--header-bg);
 }
