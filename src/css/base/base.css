@@ -110,6 +110,10 @@ img:not([src]) {
   visibility: hidden;
 }
 
+p > img {
+	display:inline;
+}
+
 /* 5. List ol - ul
 /* ---------------------------------------------------------- */
 
