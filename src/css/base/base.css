@@ -2,6 +2,10 @@ html {
   @apply text-base;
 }
 
+html:not(:has(>body.overflow-hidden)){
+	scrollbar-gutter: stable;
+}
+
 body, body>div>footer, body>div>header, .post-related {
   transition: background-color 1.5s ease;
 }

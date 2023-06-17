@@ -1,5 +1,6 @@
 .header {
-  transition: transform .3s background-color 1.0s ease;
+  transition: transform .3s background-color .7s ease;
+	backdrop-filter: blur(10px);
 }
 
 .header-bg {
