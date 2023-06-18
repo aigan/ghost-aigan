@@ -38,7 +38,7 @@
   }
 
   a {
-    @apply underline underline-offset-4 break-words;
+    @apply underline underline-offset-4 break-words hover:text-primary;
     /* text-decoration: underline; */
     /* word-break: break-word; */
   }
@@ -99,6 +99,13 @@
     counter-increment: post;
     padding-right: 0.75rem;
   }
+
+  /* aigan use last paragraph for metadata */
+  & > p:last-child{
+    height: 0;
+    overflow: hidden;
+  }
+
 }
 
 /* has first letter Big

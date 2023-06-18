@@ -8,44 +8,44 @@ const $feedback = document.querySelector("aside.social-share");
 
 const re = /\[\[\s*(.*?)\s*\]\]/g;
 for (const match of txt.matchAll(re)) {
-  $links.push( place(match[1] ));
+  const $link = place(match[1]);
+  if (!$link) continue;
+  $links.push( $link );
 }
 
-if (!$links.length) return;
+if ($links.length) {
+  // $last.remove(); // style will hide last paragraph. Don't remove it without changing that.
+  $feedback.innerHTML = `<svg class="icon icon--comments"><use xlink:href="#icon-comments"></use></svg> Discuss on`;
 
-$last.remove();
-
-$feedback.innerHTML = `<svg class="icon icon--comments"><use xlink:href="#icon-comments"></use></svg> Discuss on`;
-
-for (let i = 0; i < $links.length; i++) {
-  $feedback.append($links[i]);
-  if( i+1 < $links.length ) $feedback.append("or");
+  for (let i = 0; i < $links.length; i++) {
+    $feedback.append($links[i]);
+    if (i + 1 < $links.length) $feedback.append("and");
+  }
+} else {
+  $last.style.height = "auto";
 }
 
 function place(url) {
   const $link = document.createElement('a');
-  $link.setAttribute("class", "godo-tracking p-2 inline-block hover:text-primary");
-  $link.setAttribute("data-event-category", "Feedback");
-  $link.setAttribute("data-event-action", "Social");
-  $link.setAttribute("data-event-non-interactive", "true");
-  $link.setAttribute("target", "_blank");
-  $link.setAttribute("rel", "noopener noreferrer");
 
-  let title;
-  if (url.startsWith("https://twitter")) {
-    title = "Twitter";
-  } else if (url.startsWith("https://www.reddit.com/")){
-    title = "Reddit";
-  } else { 
-    console.log("url not recognized", url);
-    return;
+  const title = url.match(/^https?:\/\/(www\.)?([^\.]+)/)[2];
+  const expl = `Comment on ${title}`;
+
+  for (const [key, value] of Object.entries({
+    class: "godo-tracking p-2 inline-block underline underline-offset-4 hover:text-primary",
+    "data-event-category": "Feedback",
+    "data-event-action": "Social",
+    "data-event-non-interactive": "true",
+    "data-event-label": title,
+    target: "_blank",
+    rel: "noopener noreferrer",
+    title: expl,
+    "aria-label": expl,
+    href: url,
+  })) {
+    $link.setAttribute(key, value);
   }
 
-  const expl = `Comment on ${title}`;
-  $link.setAttribute("data-event-label", title);
-  $link.setAttribute("title", expl);
-  $link.setAttribute("aria-label", expl);
-  $link.setAttribute("href", url);
   $link.innerText = title;
   return $link;
 }
