@@ -12,7 +12,7 @@
 
   /* Header */
   --header-text-link: $primary-text-color;
-  --header-bg: rgb(255 255 255 / .7);
+  --header-bg: rgb(255 255 255 / .5);
 
   /* story */
   --story-small-bg: #fff;
@@ -78,7 +78,7 @@
 
   /* Header */
   --header-text-link: #fff;
-  --header-bg: rgb(0 0 0 / .7);
+  --header-bg: rgb(0 0 0 / .3);
 
   /* story */
   --story-small-bg: #131212;
