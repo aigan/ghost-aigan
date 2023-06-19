@@ -126,3 +126,12 @@
   height: 15.625rem;
   margin-top: -15rem !important;
 }
+
+
+/*--*/
+.text-shadow-lg{
+  text-shadow: 0 0 5px black;
+}
+.text-shadow{
+  text-shadow: 0 0 2px black;
+}
