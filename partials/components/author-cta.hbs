@@ -1,0 +1,26 @@
+<div class="hh flex items-center flex-auto relative leading-snug z-4">
+
+    <ul class="flex flex-wrap flex-none mr-3 -space-x-2">
+        {{#foreach authors}}
+        <li>
+            <a href="{{url}}" title="{{t "Go to the profile of"}} {{name}}">
+                <img class="object-cover rounded-full {{#is "post"}}h-10 w-10{{else}}h-9 w-9{{/is}}"
+                    src="{{#if profile_image}}{{img_url profile_image size="xs"}}{{else}}{{asset "images/avatar.png"}}{{/if}}"
+                    alt="{{t "Go to the profile of "}} {{name}}"
+                    width="36"
+                    height="36"
+                />
+            </a>
+        </li>
+        {{/foreach}}
+    </ul>
+
+    <div class="flex-auto overflow-hidden">
+        <div class="hh-author-name text-sm truncate">
+          {{#foreach authors}}
+            Written by <strong>{{name}}</strong><br>
+            {{#if bio}}{{bio}}{{/if}}
+          {{/foreach}}
+        </div>
+    </div>
+</div>
