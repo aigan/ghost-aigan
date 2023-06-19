@@ -30,9 +30,15 @@
 {{/match}}
 
 {{!-- Featured Article - ./partials/story/story-featured.hbs --}}
-{{#match @custom.publication_cover "Featured"}}{{#get "posts" limit="1" filter="featured:true" as |godo_featured_post| }}
-    {{#if godo_featured_post}} {{#foreach godo_featured_post}}{{> "story/story-featured"}}{{/foreach}}{{/if}}
-{{/get}}{{/match}}
+{{#match @custom.publication_cover "Featured"}}
+    {{#get "posts" limit="1" filter="featured:true" as |godo_featured_post| }}
+        {{#if godo_featured_post}}
+            {{#foreach godo_featured_post}}
+                {{> "story/story-featured"}}
+            {{/foreach}}
+            {{/if}}
+    {{/get}}
+{{/match}}
 
 {{!-- Last 5 featured articles slider - ./partials/home/featured-slider.hbs --}}
 {{#match @custom.publication_cover "Featured Slider"}}{{> "home/featured-slider"}}{{/match}}
