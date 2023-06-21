@@ -1,8 +1,4 @@
 routes:
-  /signup/: members/signup
-  /signin/: members/signin
-  /account/: members/account
-  /membership/: members/membership
 
   /featured/:
     controller: channel

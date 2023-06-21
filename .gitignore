@@ -43,3 +43,4 @@ yarn.lock
 assets/*
 
 partials/icons/icons-symbol-defs.hbs
+partials/icons/svgdefs.hbs

@@ -13,6 +13,7 @@ const zip = require('gulp-zip')
 const gulpif = require('gulp-if')
 const sourcemaps = require('gulp-sourcemaps')
 const header = require('gulp-header')
+const svgSymbols = require('gulp-svg-symbols');
 
 // Babel
 const browserify = require('browserify')
@@ -147,14 +148,26 @@ function images (done) {
   ], handleError(done))
 }
 
-function svgs (done) {
+function svgdefs(done) {
   pump([
-    src('src/svg-icons/symbol-defs.svg'),
-		rename('icons-symbol-defs.hbs'),
-    dest('partials/icons'),
-    livereload()
+    src(`src/img/icon/*.svg`),
+    svgSymbols({
+      templates: [`default-svg`],
+      slug: name => name.replace(/^/, "icon-"),
+    }),
+    rename('svgdefs.hbs'),
+    dest(`partials/icons`),
   ], handleError(done))
 }
+
+// function svgs (done) {
+//   pump([
+//     src('src/svg-icons/symbol-defs.svg'),
+// 		rename('icons-symbol-defs.hbs'),
+//     dest('partials/icons'),
+//     livereload()
+//   ], handleError(done))
+// }
 
 function copyAmpStyle (done) {
   pump([
@@ -247,7 +260,7 @@ const imgWatcher = () => watch('src/img/**', images)
 // const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs)
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], styles)
 
-const compile = parallel(styles, scripts, images, svgs)
+const compile = parallel(styles, scripts, images, svgdefs)
 const watcher = parallel(cssWatcher, jsWatcher, imgWatcher, hbsWatcher)
 
 const build = series(clean, compile)
@@ -255,4 +268,4 @@ const production = series(build, copyAmpStyle, copyMainStyle, zipper)
 // const production = series(build)
 const development = series(build, serve, watcher)
 
-module.exports = { build, development, production, deploy }
+module.exports = { build, development, production, deploy, svgdefs }

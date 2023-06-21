@@ -110,8 +110,12 @@ img:not([src]) {
   visibility: hidden;
 }
 
-p > img {
+p > img, p > a > img {
 	display:inline;
+}
+
+p > a > svg {
+  margin-right: .3em;
 }
 
 /* 5. List ol - ul
