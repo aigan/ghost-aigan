@@ -2,3 +2,6 @@
 .godo-content-side {
   grid-column: wide-start/main-start;
 }
+.nav-mob {
+  backdrop-filter: blur(10px);
+}
