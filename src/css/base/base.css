@@ -118,6 +118,10 @@ p > a > svg {
   margin-right: .3em;
 }
 
+p > a:has(svg) {
+  white-space: nowrap;
+}
+
 /* 5. List ol - ul
 /* ---------------------------------------------------------- */
 
