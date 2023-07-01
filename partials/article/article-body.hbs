@@ -1,34 +1,3 @@
 <section id="post-body" class="post-body godo-canvas mx-auto relative {{#match @custom.post_font "=" "font-serif"}}font-serif{{else}}font-sans{{/match}}">{{content}}</section>
 
-{{#if access}}
-
-	<footer class="post-footer godo-canvas pt-10">
-
-		<div class="footer-cta" >
-			{{> "components/tags"}}
-
-			{{> "components/feedback"}}
-			
-			{{!-- > "components/social-share" Tracking_name="Footer" --}}
-
-			{{> "components/newsletter"}}
-		</div>
-
-		{{> "components/author-cta"}}
-
-		{{!-- Previous and next article --}}
-		{{#if @custom.show_prev_and_next_post}}
-			<div class="prev-next pb-8">
-				<hr class="my-10">
-				{{#prev_post}}
-					{{> "story/story-previous-next" storyTitle=(t "Previous article") class="mb-8"}}
-				{{/prev_post}}
-
-				{{#next_post}}
-					{{> "story/story-previous-next" storyTitle=(t "Next article") class=""}}
-				{{/next_post}}
-			</div>
-		{{/if}}
-	</footer>
-
-{{/if}}
+{{> "article/article-footer" }}

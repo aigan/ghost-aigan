@@ -42,10 +42,19 @@ const simplyPost = () => {
   const mediumZoomImg = () => {
     docSelectorAll('.post-body img').forEach(el => !el.closest('a') && el.classList.add('simply-zoom'))
 
-    mediumZoom('.simply-zoom', {
+    const zoom = mediumZoom('.simply-zoom', {
       margin: 20,
       background: 'hsla(0,0%,100%,.85)'
     })
+    zoom.on('open', event => {
+			event.target.style.height="auto";
+			event.target.style.width="auto";
+    });
+    zoom.on('opened', event => {
+			event.target.style.height=null;
+			event.target.style.width=null;
+    });
+
   }
 
   mediumZoomImg()
@@ -73,6 +82,9 @@ const simplyPost = () => {
   if (docSelectorAll('code[class*=language-]').length && typeof prismJs !== 'undefined') {
     loadScript(prismJs)
   }
+
+
+
 }
 
 document.addEventListener('DOMContentLoaded', simplyPost)

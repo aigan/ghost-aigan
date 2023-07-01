@@ -113,3 +113,37 @@
 .has-first-letter::first-letter {
   @apply float-left text-6xl font-medium leading-none -ml-2 mr-2;
 }
+
+
+/* aigan-float */
+figure.aigan-float {
+  margin-top: 0;
+  margin-bottom: .5em;
+ }
+
+figure.aigan-float > img {
+  height: max(45vh,10em);
+  object-fit: cover;
+  object-position: center 33%;
+  width: 100%;
+}
+
+/* transpiled by tailwind as media query */
+@screen md {
+
+  figure.aigan-float {
+    margin-top: 4vmin;
+    width: 20em;
+    /* move right based on .godo-canvas */
+    margin-right: calc(-46vw + 340px);
+    margin-left: .5em;
+    float: right;
+  }
+
+  figure.aigan-float > img {
+    height: 100%;
+  }
+  
+}
+
+
