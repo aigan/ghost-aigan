@@ -117,7 +117,7 @@
 
 /* aigan-float */
 figure.aigan-float {
-  margin-top: 0;
+  margin-top: 4vmin;
   margin-bottom: .5em;
  }
 
@@ -130,10 +130,9 @@ figure.aigan-float > img {
 }
 
 /* transpiled by tailwind as media query */
-@screen md {
+@screen lg {
 
   figure.aigan-float {
-    margin-top: 4vmin;
     width: 20em;
     /* move right based on .godo-canvas */
     margin-right: calc(-46vw + 340px);
