@@ -8,7 +8,7 @@
 
 /* Add extra margin before/after any cards,
 except for when immediately preceeded by a heading */
-.post-body :not(.kg-card):not([id]) + .kg-card {
+.post-body :not(.kg-card,figure):not([id]) + .kg-card {
   margin-top: 6vmin;
   margin-bottom: 0;
 }

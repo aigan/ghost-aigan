@@ -137,8 +137,9 @@ module.exports = {
       },
       padding: {
         vw8: '8vw',
-        vw4: '4vw',
         vw6: '6vw',
+        vw4: '4vw',
+        vw2: '2vw',
         vmin8: '8vmin'
       },
       boxShadow: {

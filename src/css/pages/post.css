@@ -126,6 +126,7 @@ figure.aigan-float > img {
   object-fit: cover;
   object-position: center 33%;
   width: 100%;
+  border-radius: 3px
 }
 
 /* transpiled by tailwind as media query */
