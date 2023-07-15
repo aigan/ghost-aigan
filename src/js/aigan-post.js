@@ -1,28 +1,32 @@
 
-const $post = document.querySelector("#post-body");
-const $last = $post.lastElementChild;
-const txt = $last.textContent;
-const $links = [];
+decorate_post();
+function decorate_post() {
+  const $post = document.querySelector("#post-body");
+  if (!$post) return;
+  const $last = $post.lastElementChild;
+  const txt = $last.textContent;
+  const $links = [];
 
-const $feedback = document.querySelector("aside.social-share");
+  const $feedback = document.querySelector("aside.social-share");
 
-const re = /\[\[\s*(.*?)\s*\]\]/g;
-for (const match of txt.matchAll(re)) {
-  const $link = place(match[1]);
-  if (!$link) continue;
-  $links.push( $link );
-}
-
-if ($links.length) {
-  // $last.remove(); // style will hide last paragraph. Don't remove it without changing that.
-  $feedback.innerHTML = `<svg class="icon icon--comments"><use xlink:href="#icon-comments"></use></svg> Discuss on`;
-
-  for (let i = 0; i < $links.length; i++) {
-    $feedback.append($links[i]);
-    if (i + 1 < $links.length) $feedback.append("and");
+  const re = /\[\[\s*(.*?)\s*\]\]/g;
+  for (const match of txt.matchAll(re)) {
+    const $link = place(match[1]);
+    if (!$link) continue;
+    $links.push($link);
   }
-} else {
-  $last.style.height = "auto";
+
+  if ($links.length) {
+    // $last.remove(); // style will hide last paragraph. Don't remove it without changing that.
+    $feedback.innerHTML = `<svg class="icon icon--comments"><use xlink:href="#icon-comments"></use></svg> Discuss on`;
+
+    for (let i = 0; i < $links.length; i++) {
+      $feedback.append($links[i]);
+      if (i + 1 < $links.length) $feedback.append("and");
+    }
+  } else {
+    $last.style.height = "auto";
+  }
 }
 
 function place(url) {
