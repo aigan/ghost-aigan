@@ -1,6 +1,6 @@
 {
-  "name": "aigan",
-  "description": "based on simply theme for ghost by @GodoFredoNinja",
+  "name": "ghost-aigan",
+  "description": "based on Simply theme for ghost by @GodoFredoNinja",
   "version": "0.4.0",
   "engines": {
     "ghost": ">=5.0.0"
@@ -10,9 +10,9 @@
     "desktop": "screenshot.jpg"
   },
   "author": {
-    "name": "GodoFredo",
-    "email": "hello@godofredo.ninja",
-    "url": "https://godofredo.ninja"
+    "name": "Jonas Liljegren",
+    "email": "jonas@gliljegren.org",
+    "url": "https://jonas.liljegren.org"
   },
   "gpm": {
     "type": "theme",
@@ -25,8 +25,7 @@
   "keywords": [
     "ghost",
     "theme",
-    "ghost-theme",
-    "GodoFredoNinja"
+    "ghost-theme"
   ],
   "repository": {
     "type": "git",

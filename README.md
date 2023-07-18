@@ -1,48 +1,9 @@
-<p align="center">
-  <a href="https://godofredo.ninja/ghost-theme/simply/">
-    <img src="https://user-images.githubusercontent.com/10253167/103450308-a2757c00-4c82-11eb-8bc3-29b09520fc58.png" width="150px" alt="Simply free theme for Ghost" />
-  </a>
-</p>
+# Ghost-aigan
 
-<p align="center">
-    <a href="https://godofredo.ninja/ghost-theme/simply/introduction">Docs</a>
-    ·
-    <a href="https://godofredo.ninja/ghost-theme/showcase/">Showcase</a>
-    ·
-    <a href="https://github.com/godofredoninja/simply/graphs/contributors">Contributing</a>
-    ·
-    <a href="https://www.paypal.me/godofredoninja">PayPal</a>
-    ·
-    <a href="https://twitter.com/godofredoninja">Twitter</a>
-    <br /><br />
-    <a href="https://github.com/TryGhost/Ghost">
-        <img src="https://img.shields.io/badge/Ghost-4.x-brightgreen.svg" alt="Ghost version" />
-    </a>
-    <a href="https://www.paypal.me/godofredoninja">
-        <img src="https://img.shields.io/badge/donate-paypal-blue.svg" alt="Donate" />
-    </a>
-    <a href="https://opencollective.com/simply">
-        <img src="https://opencollective.com/simply/tiers/badge.svg" alt="opencollective" />
-    </a>
-</p>
+This is a fork of [godofredoninja ghost theme simply](https://github.com/godofredoninja/simply) with changes for my personal blog.
 
-<p align="center">
-    Hello :sunglasses:
-    <br />
-    I created this theme for <a href="https://github.com/tryghost/ghost/">Ghost</a> with inspiration from <a href="https://medium.com/">Medium</a>.
-    <br />
-    It is available for free so you can use on your site.
-</p>
+The `godo` prefix originate from upstream simply. The `aigan` prefix are for my additions.
 
-<p align="center">
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url">
-        <img src="https://user-images.githubusercontent.com/10253167/103444000-877b1b80-4c32-11eb-8377-7bedd46dbdf8.gif" alt="donate" />
-    </a>
-</p>
-
-&nbsp;
-
-[![Simply free theme for ghost](https://user-images.githubusercontent.com/10253167/162076408-0356f347-6d0b-47ad-a640-e8ee7a2494af.jpg)](https://godofredo.ninja/ghost-theme/simply/)
 
 ## Featured
 
