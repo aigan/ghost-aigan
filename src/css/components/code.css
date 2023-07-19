@@ -154,3 +154,7 @@ a > code[class*="language-"] {
 .token.entity {
   cursor: help;
 }
+
+.token.block {
+  display: inline;
+}
