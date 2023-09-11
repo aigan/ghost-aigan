@@ -1,6 +1,7 @@
 /* Sidebar */
 .godo-content-side {
   grid-column: wide-start/main-start;
+  margin-top: 0;
 }
 .nav-mob {
   backdrop-filter: blur(10px);
