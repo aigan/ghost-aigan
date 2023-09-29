@@ -27,6 +27,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+body > svg {
+	display: none; /* default to not show compiled icon definitions */
+}
+
 a {
   color: inherit;
   text-decoration: none;
