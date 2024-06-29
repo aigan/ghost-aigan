@@ -1,7 +1,7 @@
 {
   "name": "ghost-aigan",
   "description": "based on Simply theme for ghost by @GodoFredoNinja",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "engines": {
     "ghost": ">=5.0.0"
   },
