@@ -149,3 +149,8 @@ details > summary {
 summary > address {
   display: inline;
 }
+
+
+@view-transition {
+  navigation: auto;
+}
